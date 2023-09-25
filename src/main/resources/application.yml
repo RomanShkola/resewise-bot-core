@@ -1,4 +1,4 @@
 telegram:
   bot:
     name: Resewise
-    token: 6627651448:AAH4DdspXxgdwh6OhGQXfnHWIDg6zT_SVTI
+    token: ${BOT_TOKEN}
