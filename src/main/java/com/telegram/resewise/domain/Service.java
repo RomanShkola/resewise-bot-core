@@ -22,8 +22,8 @@ public class Service extends BaseEntity {
     private String unit;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id")
-    private Admin admin;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "service")
     private Set<UserReservation> reservations;
