@@ -50,5 +50,8 @@ public class ResewiseBot extends TelegramLongPollingBot implements TelegramBot {
             throw new RuntimeException(e);      //Any error will be printed here
         }
     }
+    public void sendLink() {
+
+    }
 
 }
