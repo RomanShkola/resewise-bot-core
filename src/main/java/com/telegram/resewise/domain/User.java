@@ -12,11 +12,15 @@ import java.util.Set;
 @Table(name = "users")
 public class User extends BaseEntity {
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
-    private Role role;
+    @Column(name = "telegram_id")
+    private String telegramId;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private Set<UserReservation> reservations = new HashSet<>();
+    private Set<Reservation> reservations = new HashSet<>();
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
+    private Set<Reservation> owned = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Schedule> schedules = new HashSet<>();

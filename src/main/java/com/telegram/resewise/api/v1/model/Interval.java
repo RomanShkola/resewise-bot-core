@@ -8,4 +8,5 @@ import lombok.Data;
 public class Interval {
     private TimeUnit timeUnit;
     private int value;
+
 }

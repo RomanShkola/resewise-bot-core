@@ -4,11 +4,11 @@ import com.telegram.resewise.api.v1.model.ScheduleInput;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("'")
+@RequestMapping("/api")
 public class ReservationController {
 
     @PostMapping("/schedules")
-    public void createSchedule(@RequestBody ScheduleInput schedule, @PathVariable Long adminId) {
+    public void createSchedule(@RequestBody ScheduleInput scheduleInput, @PathVariable Long ownerId) {
 
     }
 

@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Entity
 @Table(name = "reservations")
-public class UserReservation extends BaseEntity {
+public class Reservation extends BaseEntity {
 
     @Column(name = "description")
     private String description;
@@ -19,6 +19,10 @@ public class UserReservation extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private User owner;
 
     @Column(name = "start_time")
     private LocalDateTime startTime;
@@ -29,7 +33,7 @@ public class UserReservation extends BaseEntity {
     @Column(name = "status")
     private StatusUnit status;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "service_id")
     private Service service;
 }

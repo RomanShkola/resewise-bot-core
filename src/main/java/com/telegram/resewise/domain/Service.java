@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.Set;
 
 @Setter
 @Getter
@@ -25,6 +24,6 @@ public class Service extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "service")
-    private Set<UserReservation> reservations;
+    @OneToOne
+    private Reservation reservations;
 }
