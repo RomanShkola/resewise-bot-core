@@ -1,17 +1,18 @@
 package com.telegram.resewise.api.v1.model;
 
+import com.telegram.resewise.domain.Reservation;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Builder
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 
-public class Interval {
-    private TimeUnit timeUnit;
-    private int value;
-
+public class ScheduleOutput {
+    private Set<ReservationDTO> reservations;
 }

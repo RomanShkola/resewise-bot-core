@@ -1,6 +1,5 @@
 package com.telegram.resewise.domain;
 
-import com.telegram.resewise.api.v1.model.ScheduleType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,14 +22,8 @@ public class Schedule extends BaseEntity {
     @Column(name = "end_time")
     private LocalDateTime endTime;
 
-    @Column(name = "type")
-    private ScheduleType type;
-
     @Lob
     @Column(name = "data")
     private String data;
-
-    @Column(name = "link")
-    private String link;
 
 }

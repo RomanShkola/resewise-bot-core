@@ -1,5 +1,6 @@
 package com.telegram.resewise.api.v1.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,11 +8,10 @@ import lombok.NoArgsConstructor;
 
 @Builder
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+public class UserInput {
 
-public class Interval {
-    private TimeUnit timeUnit;
-    private int value;
-
+    @JsonProperty("telegram_id")
+    String telegramId;
 }

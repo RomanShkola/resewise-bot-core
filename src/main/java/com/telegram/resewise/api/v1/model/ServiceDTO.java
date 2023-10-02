@@ -5,13 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Builder
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 
-public class Interval {
-    private TimeUnit timeUnit;
-    private int value;
+public class ServiceDTO {
 
+    private String name;
+    private BigDecimal price;
+    private String unit;
 }
