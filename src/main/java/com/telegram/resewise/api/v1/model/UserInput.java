@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserCreateDTO {
+public class UserInput {
 
     @JsonProperty("telegram_id")
     String telegramId;

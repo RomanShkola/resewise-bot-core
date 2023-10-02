@@ -1,11 +1,14 @@
 package com.telegram.resewise.services;
 
+import com.telegram.resewise.domain.Service;
 import com.telegram.resewise.domain.User;
 import com.telegram.resewise.repositories.UserRepository;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
+
+import java.util.Set;
 
 
-@Service
+@Component
 public class UserService {
 
     private final UserRepository userRepository;
@@ -19,5 +22,13 @@ public class UserService {
         user.setTelegramId(id);
         User savedUser = userRepository.save(user);
         return savedUser.getId();
+    }
+    public Set<Service> findServicesById(Long id) {
+        User user = userRepository.findById(id).orElse(new User());
+
+        return user.getServices();
+    }
+    public User findUserById(Long id) {
+        return userRepository.findById(id).orElse(new User());
     }
 }
